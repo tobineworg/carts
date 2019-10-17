@@ -33,7 +33,7 @@ public class RequestCounterInterceptor implements HandlerInterceptor {
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception e) throws Exception {
 		String handlerLabel = handler.toString();
-
+    System.out.println("request interceptor");
 		if (handler instanceof HandlerMethod) {
 			Method method = ((HandlerMethod) handler).getMethod();
 			handlerLabel = method.getDeclaringClass().getSimpleName() + "." + method.getName();
