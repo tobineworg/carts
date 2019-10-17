@@ -2,7 +2,6 @@ package works.weave.socks.cart.configuration;
 
 //import com.example.prometheus_demo.interceptor.RequestTimingInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -11,7 +10,7 @@ import works.weave.socks.cart.middleware.RequestCounterInterceptor;
 //import works.weave.socks.cart.middleware.HTTPMonitoringInterceptor;
 
 @Configuration
-public class WebMvcConfig {
+public class WebMvcConfig extends WebMvcConfigurerAdapter{
 	@Autowired
 	private RequestCounterInterceptor requestCounterInterceptor;
 
